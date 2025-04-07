@@ -3,236 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="دعوة لحضور حفل الزفاف" />
-    <meta property="og:description" content="نأمل أن تشاركونا فرحتنا في هذا اليوم المميز!" />
-    <meta property="og:image" content="https://lara24664.github.io/test/main/invitation.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://lara24664.github.io/test/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>دعوة الزفاف</title>
+    <title>Exclusive Event Invitation</title>
+
+    <!-- Meta Tags for SEO and Social Sharing -->
+    <meta name="description" content="You're invited to a special event! Come join us for a memorable time filled with fun and surprises.">
+    <meta name="keywords" content="event, invitation, celebration, fun, special event, join us">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph Tags (For Facebook, WhatsApp, etc.) -->
+    <meta property="og:title" content="Exclusive Event Invitation - Join Us!">
+    <meta property="og:description" content="We’re hosting an exciting event, and we would love for you to be part of it. Don’t miss out!">
+    <meta property="og:image" content="https://raw.githubusercontent.comlara24664/test/main/event-image.png">
+    <meta property="og:url" content="https://lara24664/test/">
+
+    <!-- Twitter Card Tags (For Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exclusive Event Invitation - Join Us!">
+    <meta name="twitter:description" content="Come join us for an unforgettable experience! Save the date and be part of this special event.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.comlara24664/test/main/event-image.png">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .card {
-            display: flex;
-            width: 95%;
-            max-width: 430px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 0 auto;
-            background: url(https://i.imgur.com/8N9rFb0.png);
-            position: relative;
-        }
-
-        #aya {
-            font-size: 1em;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            color: #412649;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
+            padding: 50px;
         }
-
-        #aya1 {
-            font-size: 1em;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            color: #412649;
-            text-align: center;
+        h1 {
+            color: #4CAF50;
         }
-
-        .left p {
-            font-size: 8px;
-            color: #4a235a;
-            margin: 5px 0;
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
-
-        .left {
-            width: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: width 1.5s ease-in-out;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .card.expand-left .left {
-            width: 100%;
-        }
-
-        .card.expand-left .right {
-            width: 0;
-            opacity: 0;
-        }
-
-        .right {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background-color: #000;
-            position: relative;
-            transition: width 1.5s ease-in-out, opacity 1.5s ease-in-out;
-        }
-
-        .right img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .countdown-container {
-            border-radius: 5px;
-            padding: 1px;
-            width: 140px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border: 1px solid #fdf8f6;
-            position: relative;
-            margin: 15px auto;
-            font-size: 8px;
-        }
-
-        .countdown-title {
-            font-size: 10px;
-            font-weight: bold;
-            color: #412649;
-            margin-bottom: 5px;
-            text-align: center;
-            align-items: center;
-        }
-
-        .countdownnew {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .countdown div {
-            padding: 3px;
-            border-radius: 3px;
-            width: 20px;
-            text-align: center;
-            font-size: 10px;
-        }
-
-        .label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 7px;
-            color: #412649;
-            margin-top: 3px;
-        }
-
-        .labels div {
-            width: 18px;
-            text-align: center;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 5px;
-        }
-
-        .button-container button {
-            font-size: 14px;
-            padding: 5px 10px;
+        img {
+            width: 50%;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="left">
-            <img src="logo.png" alt="Flower Decoration" class="flower">
-            <p id="aya1">﷽</p>
-            <p id="aya">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br> 
-                لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
-            <p id="aya1"> ڝــدڦــﷲ ﷻ ا̍ڸــ؏ــڟــﯧْۧــمۘ</p>
-            <h1>حضرة السّيد الدّكتور يحيى طاهر</h1>
-            <p id="ayle"> تتشرف</p>
-            <p id="ayle">عائلة السيد الأستاذ سامي بركات &nbsp; و&nbsp; عائلة المرحوم الحاج حسن سعد</p>
-            <p id="zafaf">بدعوتكم لحضور زفاف ولديهما</p>
-            <img src="alighinanamesnew33.png" alt="Flower Decoration" class="alighinanames">
-            <p>
-                <div class="date-box">
-                    <div>٨ مساءً</div>
-                    <div>١٠<strong> , حزيران</strong></div>
-                    <div>الثّلاثاء</div>
-                </div>
-            </p>
-            <p>
-                <a class="location-link" href="https://maps.app.goo.gl/JbtH78bb3L4jLQWE9" target="_blank">
-                    ننتظركم – شاهد الموقع على خرائط Google
-                </a>
-            </p>
-            <div class="countdown-container">
-                <div class="countdown-title">Countdown to our big day!</div>
-                <div class="countdownnew">
-                    <div><span id="days">00</span><div class="label">أيام</div></div>
-                    <div><span id="hours">00</span><div class="label">ساعات</div></div>
-                    <div><span id="minutes">00</span><div class="label">دقائق</div></div>
-                    <div><span id="seconds">00</span><div class="label">ثواني</div></div>
-                </div>
-            </div>
-            <div class="button-container">
-                <button id="noButton">عذراً، لا أستطيع الحضور</button>
-                <button id="yesButton">!سأحضر للاحتفال معكم</button>
-            </div>
-        </div>
-
-        <div class="right">
-            <img src="agimg1.jpeg" alt="Wedding Couple">
-        </div>
-    </div>
-
-    <script>
-        window.onload = function () {
-            setTimeout(() => {
-                startAnimation();
-            }, 1000);
-        };
-
-        function startAnimation() {
-            const card = document.querySelector(".card");
-            const rightImg = document.querySelector(".right img");
-            const left = document.querySelector(".left");
-            card.classList.add("expand-left");
-            left.addEventListener("transitionend", function onTransitionEnd(event) {
-                if (event.propertyName === "width") {
-                    rightImg.style.display = "none";
-                    left.removeEventListener("transitionend", onTransitionEnd);
-                }
-            });
-        }
-
-        function updateCountdown() {
-            const weddingDate = new Date("2025-06-10T20:00:00").getTime();
-            const now = new Date().getTime();
-            const timeLeft = weddingDate - now;
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days < 10 ? '0' + days : days
+    <h1>You're Invited to an Exclusive Event!</h1>
+    <p>We would be honored to have you join us for a very special event. Please save the date and come celebrate with us!</p>
+    <img src="https://raw.githubusercontent.com/yourusername/repository/main/event-image.jpg" alt="Event Image">
+    <p>Looking forward to seeing you there!</p>
+</body>
+</html>
