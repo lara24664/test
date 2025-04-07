@@ -1,25 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ali & Ghina Wedding Invitation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="دعوة لحضور حفل الزفاف" />
+    <meta property="og:description" content="نأمل أن تشاركونا فرحتنا في هذا اليوم المميز!" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/lara24664/test/main/invitation.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://lara24664.github.io/test/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>دعوة الزفاف</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Open Graph meta tags for WhatsApp & Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Ali & Ghina Wedding Invitation">
-  <meta property="og:description" content="You're invited to celebrate with us. Tap to view the full invitation!">
-  <meta property="og:image" content="https://i.imgur.com/3GvwNBf.jpeg">
-  <meta property="og:url" content="https://lara24664.github.io/wedding_card/">
+        .card {
+            display: flex;
+            width: 95%;
+            max-width: 430px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+            background: url(https://i.imgur.com/8N9rFb0.png);
+            position: relative;
+        }
 
-  <!-- Twitter preview (optional) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ali & Ghina Wedding Invitation">
-  <meta name="twitter:description" content="You're invited to celebrate with us. Tap to view the full invitation!">
-  <meta name="twitter:image" content="https://i.imgur.com/3GvwNBf.jpeg">
+        #aya {
+            font-size: 1em;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: #412649;
+            text-align: center;
+        }
+
+        #aya1 {
+            font-size: 1em;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: #412649;
+            text-align: center;
+        }
+
+        .left p {
+            font-size: 8px;
+            color: #4a235a;
+            margin: 5px 0;
+        }
+
+        .left {
+            width: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: width 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .card.expand-left .left {
+            width: 100%;
+        }
+
+        .card.expand-left .right {
+            width: 0;
+            opacity: 0;
+        }
+
+        .right {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #000;
+            position: relative;
+            transition: width 1.5s ease-in-out, opacity 1.5s ease-in-out;
+        }
+
+        .right img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .countdown-container {
+            border-radius: 5px;
+            padding: 1px;
+            width: 140px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #fdf8f6;
+            position: relative;
+            margin: 15px auto;
+            font-size: 8px;
+        }
+
+        .countdown-title {
+            font-size: 10px;
+            font-weight: bold;
+            color: #412649;
+            margin-bottom: 5px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .countdownnew {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .countdown div {
+            padding: 3px;
+            border-radius: 3px;
+            width: 20px;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 7px;
+            color: #412649;
+            margin-top: 3px;
+        }
+
+        .labels div {
+            width: 18px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .button-container button {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Our Wedding Page</h1>
-  <p>Ali & Ghina are getting married!</p>
-</body>
-</html>
+    <div class="card">
+        <div class="left">
+            <img src="logo.png" alt="Flower Decoration" class="flower">
+            <p id="aya1">﷽</p>
+            <p id="aya">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br> 
+                لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+            <p id="aya1"> ڝــدڦــﷲ ﷻ ا̍ڸــ؏ــڟــﯧْۧــمۘ</p>
+            <h1>حضرة السّيد الدّكتور يحيى طاهر</h1>
+            <p id="ayle"> تتشرف</p>
+            <p id="ayle">عائلة السيد الأستاذ سامي بركات &nbsp; و&nbsp; عائلة المرحوم الحاج حسن سعد</p>
+            <p id="zafaf">بدعوتكم لحضور زفاف ولديهما</p>
+            <img src="alighinanamesnew33.png" alt="Flower Decoration" class="alighinanames">
+            <p>
+                <div class="date-box">
+                    <div>٨ مساءً</div>
+                    <div>١٠<strong> , حزيران</strong></div>
+                    <div>الثّلاثاء</div>
+                </div>
+            </p>
+            <p>
+                <a class="location-link" href="https://maps.app.goo.gl/JbtH78bb3L4jLQWE9" target="_blank">
+                    ننتظركم – شاهد الموقع على خرائط Google
+                </a>
+            </p>
+            <div class="countdown-container">
+                <div class="countdown-title">Countdown to our big day!</div>
+                <div class="countdownnew">
+                    <div><span id="days">00</span><div class="label">أيام</div></div>
+                    <div><span id="hours">00</span><div class="label">ساعات</div></div>
+                    <div><span id="minutes">00</span><div class="label">دقائق</div></div>
+                    <div><span id="seconds">00</span><div class="label">ثواني</div></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="noButton">عذراً، لا أستطيع الحضور</button>
+                <button id="yesButton">!سأحضر للاحتفال معكم</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="agimg1.jpeg" alt="Wedding Couple">
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                startAnimation();
+            }, 1000);
+        };
+
+        function startAnimation() {
+            const card = document.querySelector(".card");
+            const rightImg = document.querySelector(".right img");
+            const left = document.querySelector(".left");
+            card.classList.add("expand-left");
+            left.addEventListener("transitionend", function onTransitionEnd(event) {
+                if (event.propertyName === "width") {
+                    rightImg.style.display = "none";
+                    left.removeEventListener("transitionend", onTransitionEnd);
+                }
+            });
+        }
+
+        function updateCountdown() {
+            const weddingDate = new Date("2025-06-10T20:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days
